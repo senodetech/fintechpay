@@ -1,0 +1,41 @@
+# ==========================================
+# Stage 1: Build NestJS API
+# ==========================================
+FROM node:22-alpine AS builder
+
+WORKDIR /app
+
+COPY package*.json ./
+COPY packages/shared-types/package*.json ./packages/shared-types/
+COPY apps/api/package*.json ./apps/api/
+
+RUN npm ci
+
+COPY packages/shared-types ./packages/shared-types
+COPY apps/api ./apps/api
+COPY tsconfig.json ./
+
+RUN npm run build --workspace=packages/shared-types
+RUN npm run build --workspace=apps/api
+
+# ==========================================
+# Stage 2: Production Runner
+# ==========================================
+FROM node:22-alpine AS runner
+
+WORKDIR /app
+ENV NODE_ENV=production
+
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/packages/shared-types/package*.json ./packages/shared-types/
+COPY --from=builder /app/apps/api/package*.json ./apps/api/
+
+RUN npm ci --omit=dev
+
+COPY --from=builder /app/packages/shared-types/dist ./packages/shared-types/dist
+COPY --from=builder /app/apps/api/dist ./apps/api/dist
+COPY --from=builder /app/apps/api/prisma ./apps/api/prisma
+
+EXPOSE 3000
+
+CMD ["node", "apps/api/dist/main"]

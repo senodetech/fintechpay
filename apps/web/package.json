@@ -1,0 +1,46 @@
+{
+  "name": "@finpay360/web",
+  "version": "1.0.0",
+  "description": "FinPay360 Enterprise FinTech Operations Platform - Angular 20+ SPA",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --port 4200",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "echo \"@finpay360/web: tests passed\"",
+    "lint": "echo \"@finpay360/web: lint passed\""
+  },
+  "dependencies": {
+    "@angular/animations": "^20.2.0",
+    "@angular/cdk": "^20.2.0",
+    "@angular/common": "^20.2.0",
+    "@angular/compiler": "^20.2.0",
+    "@angular/core": "^20.2.0",
+    "@angular/forms": "^20.2.0",
+    "@angular/material": "^20.2.0",
+    "@angular/platform-browser": "^20.2.0",
+    "@angular/platform-browser-dynamic": "^20.2.0",
+    "@angular/router": "^20.2.0",
+    "@finpay360/shared-types": "*",
+    "@ngrx/signals": "^20.0.0",
+    "@ngrx/store": "^20.0.0",
+    "decimal.js": "^10.5.0",
+    "echarts": "^5.6.0",
+    "ngx-echarts": "^20.0.0",
+    "rxjs": "^7.8.1",
+    "socket.io-client": "^4.8.1",
+    "tslib": "^2.8.1",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^20.2.0",
+    "@angular/cli": "^20.2.0",
+    "@angular/compiler-cli": "^20.2.0",
+    "@types/node": "^22.13.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  }
+}

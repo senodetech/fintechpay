@@ -1,0 +1,165 @@
+export enum Role {
+  ADMIN = 'ADMIN',
+  OPERATIONS = 'OPERATIONS',
+  FINANCE = 'FINANCE',
+  RISK_ANALYST = 'RISK_ANALYST',
+  CUSTOMER_SUPPORT = 'CUSTOMER_SUPPORT',
+  CUSTOMER = 'CUSTOMER',
+  AUDITOR = 'AUDITOR',
+}
+
+export enum Permission {
+  USERS_READ = 'users:read',
+  USERS_WRITE = 'users:write',
+  ACCOUNTS_READ = 'accounts:read',
+  ACCOUNTS_WRITE = 'accounts:write',
+  PAYMENTS_READ = 'payments:read',
+  PAYMENTS_WRITE = 'payments:write',
+  PAYMENTS_REFUND = 'payments:refund',
+  TRANSACTIONS_READ = 'transactions:read',
+  TRANSACTIONS_EXPORT = 'transactions:export',
+  FRAUD_READ = 'fraud:read',
+  FRAUD_WRITE = 'fraud:write',
+  REPORTS_READ = 'reports:read',
+  AUDIT_READ = 'audit:read',
+}
+
+export enum PaymentStatus {
+  INITIATED = 'INITIATED',
+  AUTHORIZED = 'AUTHORIZED',
+  PROCESSING = 'PROCESSING',
+  COMPLETED = 'COMPLETED',
+  FAILED = 'FAILED',
+  CANCELLED = 'CANCELLED',
+  REFUNDED = 'REFUNDED',
+  PARTIALLY_REFUNDED = 'PARTIALLY_REFUNDED',
+  CHARGEBACK = 'CHARGEBACK',
+}
+
+export enum PaymentMethod {
+  CARD = 'CARD',
+  BANK_TRANSFER = 'BANK_TRANSFER',
+  UPI = 'UPI',
+  WALLET = 'WALLET',
+  ACH = 'ACH',
+  SEPA = 'SEPA',
+  WIRE = 'WIRE',
+}
+
+export enum PaymentProvider {
+  STRIPE = 'STRIPE',
+  ADYEN = 'ADYEN',
+  MOCK_BANK_RAIL = 'MOCK_BANK_RAIL',
+  SWIFT = 'SWIFT',
+  SEPA_CORE = 'SEPA_CORE',
+}
+
+export enum AccountType {
+  CHECKING = 'CHECKING',
+  SAVINGS = 'SAVINGS',
+  BUSINESS = 'BUSINESS',
+  MERCHANT = 'MERCHANT',
+  WALLET = 'WALLET',
+}
+
+export enum AccountStatus {
+  ACTIVE = 'ACTIVE',
+  FROZEN = 'FROZEN',
+  SUSPENDED = 'SUSPENDED',
+  CLOSED = 'CLOSED',
+}
+
+export enum Currency {
+  USD = 'USD',
+  EUR = 'EUR',
+  GBP = 'GBP',
+  INR = 'INR',
+  JPY = 'JPY',
+  CAD = 'CAD',
+  AUD = 'AUD',
+  SGD = 'SGD',
+}
+
+export enum TransactionType {
+  DEBIT = 'DEBIT',
+  CREDIT = 'CREDIT',
+  TRANSFER = 'TRANSFER',
+  PAYMENT = 'PAYMENT',
+  REFUND = 'REFUND',
+  FEE = 'FEE',
+  CHARGEBACK = 'CHARGEBACK',
+  ADJUSTMENT = 'ADJUSTMENT',
+}
+
+export enum TransactionDirection {
+  INBOUND = 'INBOUND',
+  OUTBOUND = 'OUTBOUND',
+  INTERNAL = 'INTERNAL',
+}
+
+export enum TransactionStatus {
+  PENDING = 'PENDING',
+  POSTED = 'POSTED',
+  SETTLED = 'SETTLED',
+  FAILED = 'FAILED',
+  REVERSED = 'REVERSED',
+}
+
+export enum LedgerEntryType {
+  DEBIT = 'DEBIT',
+  CREDIT = 'CREDIT',
+}
+
+export enum KycStatus {
+  PENDING = 'PENDING',
+  VERIFIED = 'VERIFIED',
+  REJECTED = 'REJECTED',
+  EXPIRED = 'EXPIRED',
+}
+
+export enum RiskLevel {
+  LOW = 'LOW',
+  MEDIUM = 'MEDIUM',
+  HIGH = 'HIGH',
+  CRITICAL = 'CRITICAL',
+}
+
+export enum FraudAlertStatus {
+  OPEN = 'OPEN',
+  INVESTIGATING = 'INVESTIGATING',
+  CONFIRMED = 'CONFIRMED',
+  FALSE_POSITIVE = 'FALSE_POSITIVE',
+  RESOLVED = 'RESOLVED',
+}
+
+export enum FraudRuleCode {
+  RULE_HIGH_VALUE = 'RULE_HIGH_VALUE',
+  RULE_VELOCITY = 'RULE_VELOCITY',
+  RULE_GEO_ANOMALY = 'RULE_GEO_ANOMALY',
+  RULE_HIGH_RISK_COUNTRY = 'RULE_HIGH_RISK_COUNTRY',
+  RULE_DEVICE_ANOMALY = 'RULE_DEVICE_ANOMALY',
+  RULE_AUTH_FAILURE = 'RULE_AUTH_FAILURE',
+}
+
+export enum NotificationType {
+  PAYMENT_SUCCESS = 'PAYMENT_SUCCESS',
+  PAYMENT_FAILED = 'PAYMENT_FAILED',
+  FRAUD_ALERT = 'FRAUD_ALERT',
+  ACCOUNT_ALERT = 'ACCOUNT_ALERT',
+  SECURITY_ALERT = 'SECURITY_ALERT',
+  SYSTEM_ALERT = 'SYSTEM_ALERT',
+}
+
+export enum AuditAction {
+  USER_LOGIN = 'USER_LOGIN',
+  USER_LOGOUT = 'USER_LOGOUT',
+  CREATE_PAYMENT = 'CREATE_PAYMENT',
+  REFUND_PAYMENT = 'REFUND_PAYMENT',
+  CANCEL_PAYMENT = 'CANCEL_PAYMENT',
+  FREEZE_ACCOUNT = 'FREEZE_ACCOUNT',
+  UNFREEZE_ACCOUNT = 'UNFREEZE_ACCOUNT',
+  UPDATE_KYC = 'UPDATE_KYC',
+  UPDATE_FRAUD_RULE = 'UPDATE_FRAUD_RULE',
+  RESOLVE_FRAUD_ALERT = 'RESOLVE_FRAUD_ALERT',
+  UPDATE_ROLE_PERMISSIONS = 'UPDATE_ROLE_PERMISSIONS',
+}

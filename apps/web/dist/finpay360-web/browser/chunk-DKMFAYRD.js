@@ -1,0 +1,1 @@
+import{Oa as n}from"./chunk-Y6ORVQDP.js";var i=class t{transform(r){if(!r)return"";let e=r.replace(/\s+/g,"");return e.length<=4?e:`**** **** **** ${e.slice(-4)}`}static \u0275fac=function(e){return new(e||t)};static \u0275pipe=n({name:"maskAccount",type:t,pure:!0})};export{i as a};
