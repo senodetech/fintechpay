@@ -195,3 +195,4 @@ npm run test:web
 ## 👥 Author & Committer
 **Senapathy** (<senodetech@gmail.com>)
 - GitHub: [senodetech/fintechpay](https://github.com/senodetech/fintechpay)
+
