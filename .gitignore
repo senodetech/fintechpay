@@ -1,7 +1,55 @@
-# Compiled output
+# Compiled outputs
 /dist
 /tmp
 /out-tsc
+/bazel-out
+/.angular/cache
+
+# Node dependencies
 /node_modules
-.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json.bak
+
+# IDE and Editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 .history/*
+
+# Environment & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# Coverage & Tests
+/coverage
+/reports
+*.lcov
+test.log
+.nyc_output
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Database
+apps/api/prisma/*.db
+apps/api/prisma/*.db-journal
+
+# Temporary scripts
+__pycache__/
+*.pyc
